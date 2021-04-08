@@ -1,11 +1,5 @@
-//
-//  ViewController.swift
-//  SampleApp
-//
-//  Created by 伊藤 凌也 on 2021/04/09.
-//
-
 import UIKit
+import SampleAppPackage
 
 class ViewController: UIViewController {
 

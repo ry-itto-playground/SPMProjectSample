@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E858D683261FE7E200F0A64C /* SampleAppPackage in Frameworks */ = {isa = PBXBuildFile; productRef = E858D682261FE7E200F0A64C /* SampleAppPackage */; };
 		E8D7C89F261F5A66002537B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7C89E261F5A66002537B2 /* AppDelegate.swift */; };
 		E8D7C8A1261F5A66002537B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7C8A0261F5A66002537B2 /* SceneDelegate.swift */; };
 		E8D7C8A3261F5A66002537B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7C8A2261F5A66002537B2 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E858D680261FE7B600F0A64C /* SampleAppPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SampleAppPackage; path = ../Sources/SampleAppPackage; sourceTree = "<group>"; };
 		E8D7C89B261F5A66002537B2 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D7C89E261F5A66002537B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8D7C8A0261F5A66002537B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E858D683261FE7E200F0A64C /* SampleAppPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E858D67F261FE7B600F0A64C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E858D680261FE7B600F0A64C /* SampleAppPackage */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E8D7C892261F5A66002537B2 = {
 			isa = PBXGroup;
 			children = (
 				E8D7C89D261F5A66002537B2 /* App */,
 				E8D7C89C261F5A66002537B2 /* Products */,
+				E858D67F261FE7B600F0A64C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +95,9 @@
 			dependencies = (
 			);
 			name = SampleApp;
+			packageProductDependencies = (
+				E858D682261FE7E200F0A64C /* SampleAppPackage */,
+			);
 			productName = SampleApp;
 			productReference = E8D7C89B261F5A66002537B2 /* SampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -339,6 +354,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E858D682261FE7E200F0A64C /* SampleAppPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SampleAppPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E8D7C893261F5A66002537B2 /* Project object */;
 }

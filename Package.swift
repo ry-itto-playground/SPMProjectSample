@@ -11,7 +11,8 @@ let package = Package(
     products: [
         .library(
             name: "SampleAppPackage",
-            targets: ["SampleAppPackage"]),
+            targets: ["SampleAppPackage"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/SwiftGen/SwiftGen", .exact("6.4.0")),

@@ -263,6 +263,15 @@
         }
       },
       {
+        "package": "VueFlux",
+        "repositoryURL": "https://github.com/taoshotaro/VueFlux",
+        "state": {
+          "branch": "support-spm",
+          "revision": "b029854f564440e6dcbf7bdce8840990ed407fb2",
+          "version": null
+        }
+      },
+      {
         "package": "Yams",
         "repositoryURL": "https://github.com/jpsim/Yams.git",
         "state": {

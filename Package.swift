@@ -7,6 +7,7 @@ let package = Package(
     name: "SampleAppPackage",
     platforms: [
         .iOS(.v14),
+        .macOS(.v10_12),
     ],
     products: [
         .library(
@@ -20,15 +21,18 @@ let package = Package(
         .package(url: "https://github.com/grpc/grpc-swift", .exact("1.0.0")),
         .package(url: "https://github.com/nicklockwood/SwiftFormat", .exact("0.47.13")),
         .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk.git", .branch("7.0-spm-beta")),
-//        .package(url: "https://github.com/taoshotaro/VueFlux", .branch("support-spm")),
+        .package(url: "https://github.com/taoshotaro/VueFlux", .branch("support-spm")),
     ],
+
     targets: [
-        .binaryTarget(name: "VueFlux", path: "Carthage/Build/VueFlux.xcframework"),
+        // Carthage で追加したパッケージを使用する場合、 binaryTarget で追加する
+        // .binaryTarget(name: "VueFlux", path: "Carthage/Build/VueFlux.xcframework"),
         .target(
             name: "SampleAppPackage",
             dependencies: [
                 .product(name: "FirebaseAuth", package: "Firebase"),
-                .target(name: "VueFlux"),
+                .product(name: "VueFlux", package: "VueFlux"),
+//                .target(name: "VueFlux"),
             ]),
         .testTarget(
             name: "SampleAppPackageTests",

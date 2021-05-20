@@ -22,7 +22,6 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/taoshotaro/VueFlux", .branch("support-spm")),
     ],
 
     targets: [
@@ -31,8 +30,6 @@ let package = Package(
         .target(
             name: "SampleAppPackage",
             dependencies: [
-                .product(name: "VueFlux", package: "VueFlux"),
-//                .target(name: "VueFlux"),
             ],
             resources: [
                 // Resources 内で 画像を置いている場合、なぜか png しか　Image や　UIImage で参照する際に画像として認識してくれない

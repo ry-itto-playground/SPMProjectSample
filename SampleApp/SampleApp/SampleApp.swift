@@ -6,13 +6,26 @@
 //
 
 import SampleAppPackage
+import SampleAppPackageCatalog
 import SwiftUI
 
 @main
 struct SampleApp: App {
+    @State var selection = 0
+
     var body: some Scene {
         WindowGroup {
-            SampleView()
+            TabView(selection: $selection,
+                    content: {
+                        SampleView()
+                            .tabItem {
+                                Text("Use .process")
+                            }
+                        SampleViewCatalog()
+                            .tabItem {
+                                Text("Use Asset Catalog")
+                            }
+                    })
         }
     }
 }

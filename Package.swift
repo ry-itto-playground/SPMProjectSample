@@ -16,6 +16,10 @@ let package = Package(
             type: .dynamic,
             targets: ["SampleAppPackage"]
         ),
+        .library(
+            name: "SampleAppPackageCatalog",
+            targets: ["SampleAppPackageCatalog"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/taoshotaro/VueFlux", .branch("support-spm")),
@@ -32,8 +36,9 @@ let package = Package(
             ],
             resources: [
                 // Resources 内で 画像を置いている場合、なぜか png しか　Image や　UIImage で参照する際に画像として認識してくれない
-//                .process("Resources/"),
+                .process("Resources/"),
             ]),
+        .target(name: "SampleAppPackageCatalog"),
         .testTarget(
             name: "SampleAppPackageTests",
             dependencies: ["SampleAppPackage"]),

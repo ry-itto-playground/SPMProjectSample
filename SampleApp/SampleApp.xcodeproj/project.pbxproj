@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8758A912656A4620028AFC6 /* SampleAppPackageCatalog in Frameworks */ = {isa = PBXBuildFile; productRef = E8758A902656A4620028AFC6 /* SampleAppPackageCatalog */; };
 		E89428EC26510B35001ABF7C /* SampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89428EB26510B35001ABF7C /* SampleApp.swift */; };
 		E89428F026510B38001ABF7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E89428EF26510B38001ABF7C /* Assets.xcassets */; };
 		E89428F326510B38001ABF7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E89428F226510B38001ABF7C /* Preview Assets.xcassets */; };
@@ -42,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E89428FE26510B5F001ABF7C /* SampleAppPackage in Frameworks */,
+				E8758A912656A4620028AFC6 /* SampleAppPackageCatalog in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +112,7 @@
 			name = SampleApp;
 			packageProductDependencies = (
 				E89428FD26510B5F001ABF7C /* SampleAppPackage */,
+				E8758A902656A4620028AFC6 /* SampleAppPackageCatalog */,
 			);
 			productName = SampleApp_SwiftUI;
 			productReference = E89428E826510B35001ABF7C /* SampleApp.app */;
@@ -353,6 +356,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E8758A902656A4620028AFC6 /* SampleAppPackageCatalog */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SampleAppPackageCatalog;
+		};
 		E89428FD26510B5F001ABF7C /* SampleAppPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SampleAppPackage;

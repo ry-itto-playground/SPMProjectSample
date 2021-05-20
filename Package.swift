@@ -12,15 +12,11 @@ let package = Package(
     products: [
         .library(
             name: "SampleAppPackage",
+            type: .dynamic,
             targets: ["SampleAppPackage"]
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/SwiftGen/SwiftGen", .exact("6.4.0")),
-        .package(url: "https://github.com/realm/SwiftLint", .exact("0.43.1")),
-        .package(url: "https://github.com/grpc/grpc-swift", .exact("1.0.0")),
-        .package(url: "https://github.com/nicklockwood/SwiftFormat", .exact("0.47.13")),
-        .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk.git", .branch("7.0-spm-beta")),
         .package(url: "https://github.com/taoshotaro/VueFlux", .branch("support-spm")),
     ],
 
@@ -30,9 +26,11 @@ let package = Package(
         .target(
             name: "SampleAppPackage",
             dependencies: [
-                .product(name: "FirebaseAuth", package: "Firebase"),
                 .product(name: "VueFlux", package: "VueFlux"),
 //                .target(name: "VueFlux"),
+            ],
+            resources: [
+                .process("Resources/"),
             ]),
         .testTarget(
             name: "SampleAppPackageTests",

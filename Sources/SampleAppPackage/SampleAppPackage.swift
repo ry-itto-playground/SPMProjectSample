@@ -1,4 +1,3 @@
-import FirebaseAuth
 import VueFlux
 
 struct SampleAppPackage {

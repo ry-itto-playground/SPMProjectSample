@@ -1,6 +1,6 @@
 import SwiftUI
 
-public struct SampleView: View {
+public struct SampleViewCatalog: View {
 
     public init() {}
 
@@ -48,8 +48,8 @@ public struct SampleView: View {
     }
 }
 
-public struct SwiftUIView_Previews: PreviewProvider {
+public struct SampleViewCatalog_Previews: PreviewProvider {
     public static var previews: some View {
-        SampleView()
+        SampleViewCatalog()
     }
 }
